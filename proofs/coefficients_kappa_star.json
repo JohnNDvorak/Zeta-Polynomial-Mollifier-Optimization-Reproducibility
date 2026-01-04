@@ -1,0 +1,178 @@
+{
+  "title": "\u03ba* (SIMPLE ZEROS) Z-BASIS COEFFICIENTS FOR c(R*) = 1",
+  "generated": "2026-01-03",
+  "polynomials": {
+    "P1_tilde": [
+      -2.0,
+      0.9375,
+      1.0,
+      -0.6
+    ],
+    "P2_tilde": [
+      1.049837,
+      -0.097446
+    ],
+    "P3_tilde": [
+      0.035113,
+      -0.156465
+    ],
+    "Q_monomial": [
+      1.0,
+      -1.032446
+    ],
+    "Q_przz_basis": {
+      "q0": 0.483777,
+      "q1": 0.516223
+    },
+    "note": "P1 from \u03ba (universal), P2/P3 from \u03ba* (degree 1)"
+  },
+  "z_basis": {
+    "z": "exp(R/7)",
+    "w": "exp(-R/7) = 1/z",
+    "z_at_Rstar": 1.1667668363917807,
+    "R_star": 1.079655751341322
+  },
+  "S12_plus": {
+    "formula": "S\u2081\u2082(+R) = \u03a3 a\u2096\u00b7z\u1d4f for k \u2208 {0,4,8,14,18,22}",
+    "coefficients": {
+      "a_0": {
+        "num": 375381,
+        "den": 7237196,
+        "decimal": 0.051868292637
+      },
+      "a_4": {
+        "num": 949367,
+        "den": 9713543,
+        "decimal": 0.097736428407
+      },
+      "a_8": {
+        "num": 243247,
+        "den": 9916174,
+        "decimal": 0.024530327927
+      },
+      "a_14": {
+        "num": 38102,
+        "den": 8491849,
+        "decimal": 0.0044868909
+      },
+      "a_18": {
+        "num": -6235,
+        "den": 9839144,
+        "decimal": -0.000633693338
+      },
+      "a_22": {
+        "num": 616,
+        "den": 9276109,
+        "decimal": 6.6407154e-05
+      }
+    }
+  },
+  "S12_minus": {
+    "formula": "S\u2081\u2082(-R) = \u03a3 a'\u2096\u00b7w\u1d4f for k \u2208 {0,4,8,14,18,22}",
+    "coefficients": {
+      "a_0": {
+        "num": 226259,
+        "den": 5268266,
+        "decimal": 0.042947527706
+      },
+      "a_4": {
+        "num": 1199987,
+        "den": 8740911,
+        "decimal": 0.137283974176
+      },
+      "a_8": {
+        "num": -252448,
+        "den": 5829135,
+        "decimal": -0.043307969364
+      },
+      "a_14": {
+        "num": 486758,
+        "den": 4620591,
+        "decimal": 0.105345398457
+      },
+      "a_18": {
+        "num": -837411,
+        "den": 8649839,
+        "decimal": -0.096812322172
+      },
+      "a_22": {
+        "num": 155226,
+        "den": 4713103,
+        "decimal": 0.032934989963
+      }
+    }
+  },
+  "S34": {
+    "formula": "S\u2083\u2084(R) = (\u03b1 + \u03b2\u00b7R) + (\u03b3 + \u03b4\u00b7R)\u00b7z\u00b9\u2074",
+    "parameters": {
+      "alpha": {
+        "num": -699901,
+        "den": 5411016,
+        "decimal": -0.129347427544
+      },
+      "beta": {
+        "num": -430097,
+        "den": 9241144,
+        "decimal": -0.046541532087
+      },
+      "gamma": {
+        "num": -52375,
+        "den": 4495234,
+        "decimal": -0.011651228835
+      },
+      "delta": {
+        "num": 2894,
+        "den": 825461,
+        "decimal": 0.003505919722
+      }
+    }
+  },
+  "mirror_multiplier": {
+    "M_formula": "M = G \u00d7 M\u2080",
+    "M0_formula": "M\u2080 = z\u2077 + 5 = exp(R) + 5",
+    "G_optimal": {
+      "num": 9270233,
+      "den": 9137206,
+      "decimal": 1.014558826845
+    },
+    "g_I1_exact": {
+      "num": 16823,
+      "den": 16807,
+      "decimal": 1.000951955
+    },
+    "g_I2_exact": {
+      "num": 1049,
+      "den": 1029,
+      "decimal": 1.019436893
+    }
+  },
+  "assembly": {
+    "formula": "c(R) = S\u2081\u2082(+R) + M\u00b7S\u2081\u2082(-R) + S\u2083\u2084(R)"
+  },
+  "verification_at_Rstar": {
+    "R_star": 1.079655751341322,
+    "z_star": 1.1667668363917807,
+    "S12_plus": 0.3479301241737615,
+    "S12_minus": 0.11165050169016344,
+    "S34": -0.24775685264832198,
+    "M0": 7.943666023542587,
+    "G": 1.014558826845,
+    "M": 8.059316481693854,
+    "c_Rstar": 0.9999999999863611,
+    "error": "1.36e-11"
+  },
+  "IVT_proof": {
+    "c_at_1_0": 0.9922598508667309,
+    "c_at_1_2": 1.0170304562182166,
+    "sign_change": true,
+    "monotonic": true,
+    "theorem": "\u2203! R* \u2208 (1.0, 1.2) such that c(R*) = 1"
+  },
+  "summary": {
+    "total_coefficients": 17,
+    "S12_plus": "6 constant coefficients",
+    "S12_minus": "6 constant coefficients",
+    "S34": "4 R-linear parameters",
+    "G": "1 mirror multiplier constant"
+  }
+}

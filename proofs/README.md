@@ -51,7 +51,9 @@ At R*, the proportion kappa_main = 1, meaning the Levinson-Conrey method achieve
 
 | File | Contents |
 |------|----------|
-| `coefficients_final.json` | Exact z-basis coefficients (machine precision) |
+| `coefficients_final.json` | z-basis coefficients for κ (R* = 1.14976) |
+| `coefficients_kappa_star.json` | z-basis coefficients for κ* (R* = 1.0797) |
+| `coefficients_optimal.json` | Detailed merged coefficients with rational approximations |
 | `mirror_assembly.py` | Implementation of c(R) = S_12(+R) + M*S_12(-R) + S_34(+R) |
 | `j_integral.py` | J_n(lambda) closed forms: J_n = (A_n*exp(lambda) + B_n) / lambda^{n+1} |
 | `optimal_coeffs.py` | Polynomial P_tilde_1 = [-2, 15/16, 1, -3/5] |
