@@ -1,6 +1,6 @@
-# PRZZ Reproducibility Package
+# Zeta Polynomial Mollifier Optimization - Reproducibility
 
-Reproduces the results of *"Exact Saturation of the Levinson-Conrey Method: c = 1 Achieved"* (Dvorak, 2025), building on PRZZ (2019).
+Reproducibility package for *"Exact Saturation of the Levinson-Conrey Method: c = 1 Achieved"* (Dvorak, 2025), building on PRZZ (2019).
 
 ## Central Result
 
@@ -20,7 +20,7 @@ pip install numpy pytest
 
 ### Validate PRZZ Benchmarks
 ```bash
-cd przz-reproducibility
+cd Zeta-Polynomial-Mollifier-Optimization-Reproducibility
 python -m pytest tests/ -v
 ```
 
@@ -80,7 +80,7 @@ with mirror multiplier M = G * M_0, where M_0 = exp(R) + 5 (exact algebraic iden
 ## Directory Structure
 
 ```
-przz-reproducibility/
+Zeta-Polynomial-Mollifier-Optimization-Reproducibility/
 ├── src/                 # Core computation engine
 │   └── kappa_engine.py  # Main entry point
 ├── data/                # PRZZ parameters & optimal coefficients
