@@ -1,11 +1,11 @@
 {
   "title": "OPTIMIZED POLYNOMIALS ACHIEVING c(R*) = 1",
-  "description": "These polynomials achieve exact saturation c(R*) = 1 for both κ and κ*",
+  "description": "These polynomials achieve exact saturation c(R*) = 1 for both kappa and kappa*",
   "generated": "2026-01-04",
   
   "universal_P1": {
-    "description": "P₁ works for BOTH κ and κ* (universal across benchmarks)",
-    "form": "P₁(x) = x + x(1-x)·P̃₁(1-x)",
+    "description": "P1 works for BOTH kappa and kappa* (universal across benchmarks)",
+    "form": "P1(x) = x + x(1-x)*P1_tilde(1-x)",
     "P1_tilde": [-2.0, 0.9375, 1.0, -0.6],
     "P1_tilde_exact": {
       "a0": "-2",
@@ -17,7 +17,7 @@
   },
   
   "kappa_config": {
-    "description": "Configuration for κ (original PRZZ benchmark extended)",
+    "description": "Configuration for kappa (original PRZZ benchmark extended)",
     "R_star": 1.14976023153715,
     "c_at_Rstar": 1.0,
     "kappa_main": 1.0,
@@ -33,7 +33,7 @@
   },
   
   "kappa_star_config": {
-    "description": "Configuration for κ* (simple zeros)",
+    "description": "Configuration for kappa* (simple zeros)",
     "R_star": 1.079655751341322,
     "c_at_Rstar": 1.0,
     "kappa_star_main": 1.0,
@@ -44,7 +44,7 @@
       "q1": 0.516223
     },
     "Q_monomial": [1.0, -1.032446],
-    "note": "P2/P3 are degree 1 (simpler than κ config)"
+    "note": "P2/P3 are degree 1 (simpler than kappa config)"
   },
   
   "parameters": {
@@ -56,9 +56,9 @@
   "mirror_formula": {
     "M0": "exp(R) + 5",
     "M0_exact": "exp(R) + (2K-1) for K=3",
-    "G": "f_I1·g_I1 + (1-f_I1)·g_I2 ≈ 1.015",
-    "M": "G × M0",
-    "assembly": "c(R) = S₁₂(+R) + M·S₁₂(-R) + S₃₄(+R)"
+    "G": "f_I1*g_I1 + (1-f_I1)*g_I2 ~ 1.015",
+    "M": "G * M0",
+    "assembly": "c(R) = S12(+R) + M*S12(-R) + S34(+R)"
   },
   
   "validation": {
