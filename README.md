@@ -40,21 +40,19 @@ print(f"kappa* gap: {validation['kappa_star']['gap_pct']:+.6f}%")  # -0.0004%
 
 ### Find c = 1 Saturation Point
 ```python
-from src.kappa_engine import KappaEngine
-from src.polynomials import load_przz_polynomials
 import json
 
-# Load optimal polynomials that achieve c = 1
-with open('data/optimal_polynomials.json') as f:
+# Load optimized polynomials that achieve c(R*) = 1
+with open('data/optimized_polynomials_c1.json') as f:
     opt = json.load(f)
 
-# At R* = 1.14976..., we get c = 1
-R_star = 1.14976023153715
-engine = KappaEngine.from_przz_kappa()
-engine.R = R_star
-result = engine.compute_kappa()
-print(f"c(R*) = {result.c:.15f}")  # 1.000000000000000
-print(f"kappa = {result.kappa:.10f}")  # ~1.0 (log(1) = 0)
+# Key saturation points:
+print(f"kappa:  R* = {opt['kappa_config']['R_star']}")      # 1.14976023153715
+print(f"kappa*: R* = {opt['kappa_star_config']['R_star']}")  # 1.079655751341322
+
+# Universal P1 polynomial (works for both benchmarks):
+print(f"P1_tilde = {opt['universal_P1']['P1_tilde']}")  # [-2.0, 0.9375, 1.0, -0.6]
+# Exact: [-2, 15/16, 1, -3/5]
 ```
 
 ## Benchmark Reproduction
@@ -93,7 +91,7 @@ Zeta-Polynomial-Mollifier-Optimization-Reproducibility/
 ## References
 
 - Pratt, Robles, Zaharescu, Zeindler (2019): "More Than Five-Twelfths of the Zeros of zeta Are on the Critical Line"
-- See `proofs/coefficients_final.json` for the exact z-basis coefficients
+- See `proofs/coefficients_kappa.json` for the exact z-basis coefficients (κ)
 - See `proofs/README.md` for the algebraic proof structure
 
 ## License

@@ -32,11 +32,11 @@ from src.polynomials import (
 # =============================================================================
 
 class TestJSONSelfConsistency:
-    """Verify przz_parameters.json internal consistency."""
+    """Verify przz_baseline_kappa.json internal consistency."""
 
     def test_kappa_c_R_relationship(self):
         """Verify kappa = 1 - log(c)/R from JSON values."""
-        json_path = Path(__file__).parent.parent / "data" / "przz_parameters.json"
+        json_path = Path(__file__).parent.parent / "data" / "przz_baseline_kappa.json"
         with open(json_path) as f:
             data = json.load(f)
 

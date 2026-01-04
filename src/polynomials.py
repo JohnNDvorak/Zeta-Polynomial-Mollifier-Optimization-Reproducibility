@@ -442,14 +442,14 @@ def load_przz_polynomials(
     json_path: Union[str, Path, None] = None
 ) -> Tuple[P1Polynomial, PellPolynomial, PellPolynomial, QPolynomial]:
     """
-    Load PRZZ polynomials from przz_parameters.json.
+    Load PRZZ baseline polynomials from przz_baseline_kappa.json.
 
     Schema-flexible: accepts both old and new JSON formats.
 
     Args:
         enforce_Q0: If True, recompute Q's c0 so Q(0)=1 exactly.
                    If False (default), use printed c0 value.
-        json_path: Optional path to JSON file. Defaults to data/przz_parameters.json.
+        json_path: Optional path to JSON file. Defaults to data/przz_baseline_kappa.json.
 
     Returns:
         Tuple of (P1, P2, P3, Q) polynomials
@@ -457,7 +457,7 @@ def load_przz_polynomials(
     if json_path is None:
         # Default path relative to this module
         json_path = (
-            Path(__file__).parent.parent / "data" / "przz_parameters.json"
+            Path(__file__).parent.parent / "data" / "przz_baseline_kappa.json"
         )
     else:
         json_path = Path(json_path)
@@ -507,7 +507,7 @@ def load_przz_polynomials_kappa_star(
         Tuple of (P1, P2, P3, Q) polynomials for kappa* benchmark
     """
     json_path = (
-        Path(__file__).parent.parent / "data" / "przz_parameters_kappa_star.json"
+        Path(__file__).parent.parent / "data" / "przz_baseline_kappa_star.json"
     )
     return load_przz_polynomials(enforce_Q0=enforce_Q0, json_path=json_path)
 
