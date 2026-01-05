@@ -18,8 +18,8 @@
   
   "kappa_config": {
     "description": "Configuration for kappa (original PRZZ benchmark extended)",
-    "R_star": 1.14976023153715,
-    "c_at_Rstar": 1.0,
+    "R": 1.14976023153715,
+    "c_at_R": 1.0,
     "kappa_main": 1.0,
     "P2_tilde": [0.5241, 1.3199, -0.9401],
     "P3_tilde": [0.1367, -0.6865, -0.0499],
@@ -33,9 +33,9 @@
   },
   
   "kappa_star_config": {
-    "description": "Configuration for kappa* (simple zeros)",
+    "description": "Configuration for kappa* (simple zeros, linear Q)",
     "R_star": 1.079655751341322,
-    "c_at_Rstar": 1.0,
+    "c_at_R_star": 1.0,
     "kappa_star_main": 1.0,
     "P2_tilde": [1.049837, -0.097446],
     "P3_tilde": [0.035113, -0.156465],
@@ -63,7 +63,7 @@
   
   "validation": {
     "kappa": {
-      "R_star": 1.14976023153715,
+      "R": 1.14976023153715,
       "c_computed": 1.0000000000000002,
       "error": "< 1e-15"
     },

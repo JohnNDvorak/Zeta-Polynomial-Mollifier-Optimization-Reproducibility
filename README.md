@@ -47,8 +47,8 @@ with open('data/optimized_polynomials_c1.json') as f:
     opt = json.load(f)
 
 # Key saturation points:
-print(f"kappa:  R* = {opt['kappa_config']['R_star']}")      # 1.14976023153715
-print(f"kappa*: R* = {opt['kappa_star_config']['R_star']}")  # 1.079655751341322
+print(f"kappa:  R = {opt['kappa_config']['R']}")           # 1.14976023153715
+print(f"kappa*: R_star = {opt['kappa_star_config']['R_star']}")  # 1.079655751341322
 
 # Universal P1 polynomial (works for both benchmarks):
 print(f"P1_tilde = {opt['universal_P1']['P1_tilde']}")  # [-2.0, 0.9375, 1.0, -0.6]
